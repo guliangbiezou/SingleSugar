@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="dots">
+        <attr name="checked" format="reference"/>
+        <attr name="unchecked" format="reference"/>
+        <attr name="left_margin" format="integer"/>
+        <attr name="right_margin" format="integer"/>
+    </declare-styleable>
+</resources>
