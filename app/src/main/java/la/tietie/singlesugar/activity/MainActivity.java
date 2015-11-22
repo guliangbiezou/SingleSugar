@@ -1,4 +1,4 @@
-package la.tietie.singlesugar;
+package la.tietie.singlesugar.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import android.widget.TextView;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 
+import la.tietie.singlesugar.R;
 import la.tietie.singlesugar.utils.VolleyUtil;
 
 public class MainActivity extends AppCompatActivity implements VolleyUtil.OnRequest {

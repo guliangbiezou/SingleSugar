@@ -3,6 +3,7 @@ package la.tietie.singlesugar.app;
 import android.app.Application;
 
 
+import la.tietie.singlesugar.utils.Share;
 import la.tietie.singlesugar.utils.VolleyUtil;
 
 /**
@@ -14,5 +15,6 @@ public class App extends Application{
     public void onCreate() {
         super.onCreate();
         VolleyUtil.initVolley(this);
+        Share.init(this);
     }
 }
