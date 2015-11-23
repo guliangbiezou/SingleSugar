@@ -4,13 +4,10 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
 
 import la.tietie.singlesugar.R;
 import la.tietie.singlesugar.fragments.CategoryFragment;
