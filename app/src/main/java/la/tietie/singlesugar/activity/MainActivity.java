@@ -41,6 +41,9 @@ public class MainActivity extends AppCompatActivity implements VolleyUtil.OnRequ
 
     }
 
+    /**
+     * chushihua
+     */
     private void turnFragment() {
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
