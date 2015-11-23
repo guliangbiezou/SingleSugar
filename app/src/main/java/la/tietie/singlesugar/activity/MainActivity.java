@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements VolleyUtil.OnRequ
 
     /**
      * chushihua11
+     * 创建和添加fragment。
      */
     private void turnFragment() {
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
