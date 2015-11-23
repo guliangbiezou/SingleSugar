@@ -3,7 +3,6 @@ package la.tietie.singlesugar.view;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
@@ -13,6 +12,7 @@ import android.widget.LinearLayout;
 import la.tietie.singlesugar.R;
 
 /**
+ * 导航栏下面的小圆点  可以随pager滑动而滑动
  * Created by Administrator on 2015/11/21 0021.
  */
 public class Dots_View extends FrameLayout {
@@ -74,6 +74,11 @@ public class Dots_View extends FrameLayout {
         this.count = count;
         initView();
     }
+
+    /**
+     *
+     * @param offset  Viewpager监听方法中调用该方法传入position+offset即可实现联动
+     */
 
     public void setOffset(float  offset) {
         FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
