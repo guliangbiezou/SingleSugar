@@ -29,7 +29,7 @@ public class StartActivity extends AppCompatActivity {
             @Override
             public void run() {
                 if(isFirst) {
-                    Share.putBoolean("isFirst",true);
+                    Share.putBoolean("isFirst",false);
                     Intent intent = new Intent(StartActivity.this,WelcomeActivity.class);
                     startActivity(intent);
                 } else {

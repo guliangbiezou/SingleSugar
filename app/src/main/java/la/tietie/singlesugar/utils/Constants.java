@@ -22,6 +22,7 @@ public interface Constants {
         String SEARCH_SHANGPING = "http://api.dantangapp.com/v2/search/item?keyword=%s&sort=&offset=0&limit=20";
         String SEARCH_ZHUANTI = "http://api.dantangapp.com/v2/search/post?keyword=%s&sort=&offset=0&limit=20";
 
+        String SORT_MAIN = "http://api.dantangapp.com/v2/channel_groups/all";
         String SORT = "http://api.dantangapp.com/v2/channels/%d/items?limit=20&offset=0&gender=1&generation=3";
 
     }
