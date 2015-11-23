@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">SingleSugar</string>
+    <array name="items">
+        <item>北京</item>
+        <item>上海</item>
+        <item>广州</item>
+        <item>深证</item>
+        <item>贵阳</item>
+        <item>北京</item>
+        <item>上海</item>
+        <item>广州</item>
+        <item>深证</item>
+        <item>贵阳</item>
+
+
+    </array>
 </resources>
