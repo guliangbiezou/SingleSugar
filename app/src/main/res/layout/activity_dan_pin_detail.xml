@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_protitle"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorTitle"
+        >
+
+        <ImageView
+            android:id="@+id/iv_detail_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_action_back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="商品详情"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:layout_centerInParent="true"/>
+        <ImageView
+            android:id="@+id/iv_detail_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/ic_menu_share"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <la.tietie.singlesugar.view.ScrollView_CanStop
+            android:id="@+id/sv_dp_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </la.tietie.singlesugar.view.ScrollView_CanStop>
+
+        <LinearLayout
+            android:id="@+id/ll_detail_center1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_scroll_head"
+            android:background="#fff"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_detail_left1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="#fff"
+                />
+            <Button
+                android:id="@+id/bt_detail_right1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="#fff"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
