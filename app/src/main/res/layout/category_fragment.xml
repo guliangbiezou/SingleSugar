@@ -1,10 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorTitle"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分类"
+            android:textColor="#fff"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="分类fragment"/>
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp"
+            android:text="专题合集"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textSize="12sp"
+
+            android:paddingRight="10dp"
+            android:paddingTop="15dp"
+            android:text="查看全部"
+            />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_fenlei"
+        android:layout_width="match_parent"
+        android:layout_height="85dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="#EFEFF4"/>
+
+    <TextView
+        android:id="@+id/tv_fgtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="10dp"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:text="风格"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_fenlei_fg"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        >
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="#EFEFF4"/>
+    <TextView
+        android:id="@+id/tv_pltitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:text="品类"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_fenlei_pl"
+        android:layout_width="match_parent"
+        android:layout_height="240dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="#EFEFF4"/>
+
+
 </LinearLayout>

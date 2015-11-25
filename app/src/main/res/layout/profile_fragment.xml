@@ -1,10 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_protitle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:text="我的fragment"/>
-</LinearLayout>
+        android:layout_height="60dp"
+        android:background="@color/colorTitle"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:layout_centerInParent="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="更多"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:textColor="#fff"
+            android:textSize="20sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <la.tietie.singlesugar.view.ScrollView_CanStop
+            android:id="@+id/sv_profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></la.tietie.singlesugar.view.ScrollView_CanStop>
+
+        <LinearLayout
+            android:id="@+id/ll_scroll_center1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_scroll_head"
+            android:background="#fff"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_scroll_left1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="风鬼传说"/>
+            <Button
+                android:id="@+id/bt_scroll_right1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="徐狗蛋"/>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    </LinearLayout>
+
+
