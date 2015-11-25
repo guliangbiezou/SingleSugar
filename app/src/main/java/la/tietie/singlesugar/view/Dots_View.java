@@ -47,8 +47,8 @@ public class Dots_View extends FrameLayout {
         if(count > 0) {
             for(int i=0;i<count ; i ++) {
                     LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-                        ViewGroup.LayoutParams.MATCH_PARENT,
-                        ViewGroup.LayoutParams.MATCH_PARENT);
+                        ViewGroup.LayoutParams.WRAP_CONTENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT);
                     ImageView iv = new ImageView(context);
                     iv.setScaleType(ImageView.ScaleType.CENTER_CROP);
                     iv.setImageResource(unchecked);

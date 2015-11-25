@@ -25,6 +25,7 @@ import la.tietie.singlesugar.bean.JingXuanVpEntity;
 import la.tietie.singlesugar.utils.Constants;
 import la.tietie.singlesugar.utils.VolleyUtil;
 import la.tietie.singlesugar.utils.Xll_JsonUtils;
+import la.tietie.singlesugar.view.Dots_View;
 import la.tietie.singlesugar.view.MyViewPager;
 
 /**
@@ -40,6 +41,7 @@ public class ChildFragment extends Fragment implements VolleyUtil.OnRequest {
     private List<JingXuanVpEntity> vpDatas = new ArrayList<>();
     private MyHomeEntityAdapter myHomeEntityAdapter;
     private RecyclerView rv_childFragment;
+    private Dots_View dots_view;
     public ChildFragment(){}
 
     public ChildFragment(int framentID) {
@@ -65,6 +67,7 @@ public class ChildFragment extends Fragment implements VolleyUtil.OnRequest {
         framentID = bundle.getInt(Constants.BUNDLE_KEY.HOMEFRAGMENT_TO_CHILDFRAGMENT);
         if(framentID == 6){
             vp_childFragment.setVisibility(View.VISIBLE);
+            dots_view.setVisibility(View.VISIBLE);
         }
         String url = String.format(Constants.URL.HOME_LISTVIEW, framentID);
         VolleyUtil.requestString(url, this);
@@ -80,6 +83,24 @@ public class ChildFragment extends Fragment implements VolleyUtil.OnRequest {
         rv_childFragment.setLayoutManager(new LinearLayoutManager(getActivity()));
         myHomeEntityAdapter = new MyHomeEntityAdapter(getActivity(),R.layout.item_homeentity);
         rv_childFragment.setAdapter(myHomeEntityAdapter);
+        dots_view = (Dots_View) view.findViewById(R.id.dv_childFragment);
+        dots_view.setCount(3);
+        vp_childFragment.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                dots_view.setOffset(position+positionOffset);
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
 
     }
 

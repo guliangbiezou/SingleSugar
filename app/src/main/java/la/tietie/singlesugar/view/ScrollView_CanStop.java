@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
@@ -22,7 +23,8 @@ import static la.tietie.singlesugar.R.layout.view_scroll;
 public class ScrollView_CanStop extends ScrollView{
 
     LinearLayout head,foot,center,center1;
-    int currentY,goneY;
+    int currentY;
+    private Button left,right;
 
     public void setCenter1(LinearLayout center1) {
         this.center1 = center1;
@@ -31,6 +33,9 @@ public class ScrollView_CanStop extends ScrollView{
     public ScrollView_CanStop(Context context, AttributeSet attrs) {
         super(context, attrs);
         View view = LayoutInflater.from(context).inflate(R.layout.view_scroll,null);
+        left = (Button) view.findViewById(R.id.bt_scroll_left);
+        right = (Button) view.findViewById(R.id.bt_scroll_right);
+        setVerticalScrollBarEnabled(false);
         addView(view);
         initView(view);
     }
@@ -47,6 +52,14 @@ public class ScrollView_CanStop extends ScrollView{
 
     public void addFoot(View view) {
         foot.addView(view);
+    }
+
+    public void setLeftBt(String str) {
+        left.setText(str);
+    }
+
+    public void setRightBt(String str) {
+        right.setText(str);
     }
 
     @Override

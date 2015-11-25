@@ -21,7 +21,7 @@ public class MyHomeEntityAdapter  extends AbsRecyclerAdapter<HomeEntity>{
         ImageView iv = (ImageView) holder.getView(R.id.iv_homeItem);
         Button bt = (Button) holder.getView(R.id.bt_homeItem);
         TextView tv = (TextView) holder.getView(R.id.tv_homeItem);
-        VolleyUtil.reqestImage(data.getCover_image_url(),iv,R.mipmap.ic_launcher,R.mipmap.ic_launcher);
+        VolleyUtil.reqestImage(data.getCover_image_url(),iv,R.drawable.ig_holder_image,R.drawable.ig_holder_image);
         bt.setText(data.getLikes_count()+"");
         tv.setText(data.getTitle());
     }

@@ -22,6 +22,8 @@
         </activity>
         <activity android:name=".activity.WelcomeActivity">
         </activity>
+        <activity android:name=".activity.DanPinDetailActivity">
+        </activity>
     </application>
 
 </manifest>

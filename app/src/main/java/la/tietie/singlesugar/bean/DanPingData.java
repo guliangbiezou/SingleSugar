@@ -1,11 +1,12 @@
 package la.tietie.singlesugar.bean;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
  * Created by Administrator on 2015/11/23 0023.
  */
-public class DanPingData {
+public class DanPingData implements Serializable{
 
     private String brand_id;
     private String brand_order;

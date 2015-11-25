@@ -1,5 +1,6 @@
 package la.tietie.singlesugar.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -19,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import la.tietie.singlesugar.R;
+import la.tietie.singlesugar.activity.DanPinDetailActivity;
 import la.tietie.singlesugar.bean.DanPingData;
 import la.tietie.singlesugar.bean.DanPingItem;
 import la.tietie.singlesugar.utils.Constants;
@@ -89,7 +91,7 @@ public class DanPingFragment extends Fragment{
         }
 
         @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
+        public View getView(final int position, View convertView, ViewGroup parent) {
             ViewHolder holder = null;
             if(convertView == null) {
                 holder = new ViewHolder();
@@ -109,6 +111,14 @@ public class DanPingFragment extends Fragment{
             holder.name.setText(data.get(position).getData().getName());
             holder.price.setText(data.get(position).getData().getPrice());
             holder.favorcount.setText(data.get(position).getData().getFavorites_count());
+            convertView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getActivity(), DanPinDetailActivity.class);
+                    intent.putExtra("data",data.get(position));
+                    startActivityForResult(intent, 0);
+                }
+            });
             return convertView;
         }
 

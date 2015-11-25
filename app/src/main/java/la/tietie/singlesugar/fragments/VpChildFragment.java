@@ -41,7 +41,7 @@ public class VpChildFragment extends Fragment {
     private void loadImageView() {
         Bundle bundle = getArguments();
         image_url = bundle.getString(Constants.BUNDLE_KEY.VPCHILD_FRAGMENT_KEY);
-        VolleyUtil.reqestImage(image_url,iv_childFragment,R.mipmap.ic_launcher,R.mipmap.ic_launcher);
+        VolleyUtil.reqestImage(image_url,iv_childFragment,R.drawable.ig_holder_image,R.drawable.ig_holder_image);
 
     }
 

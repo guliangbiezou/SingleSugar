@@ -6,17 +6,11 @@ import android.graphics.Point;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.view.ViewPager;
-import android.util.Log;
-import android.view.Display;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.ScrollView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +27,7 @@ public class ProfileFragment extends Fragment  {
 
     private ScrollView_CanStop sv;
     private LinearLayout center1;
+    private Button left1,right1;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -43,20 +38,21 @@ public class ProfileFragment extends Fragment  {
 
     private void initView(View view) {
         sv = (ScrollView_CanStop) view.findViewById(R.id.sv_profile);
+        left1 = (Button) view.findViewById(R.id.bt_scroll_left1);
+        right1 = (Button) view.findViewById(R.id.bt_scroll_right1);
         View head = LayoutInflater.from(getContext()).inflate(R.layout.profile_scroll_head,null);
         sv.addHead(head);
         center1 = (LinearLayout) view.findViewById(R.id.ll_scroll_center1);
         sv.setCenter1(center1);
-//        View foot1 = LayoutInflater.from(getContext()).inflate(R.layout.profile_scroll_head,null);
-//        View foot2 = LayoutInflater.from(getContext()).inflate(R.layout.profile_scroll_head,null);
-//        View foot3 = LayoutInflater.from(getContext()).inflate(R.layout.profile_scroll_head,null);
-//        View foot4 = LayoutInflater.from(getContext()).inflate(R.layout.profile_scroll_head,null);
-//        View foot5 = LayoutInflater.from(getContext()).inflate(R.layout.profile_scroll_head,null);
-//        sv.addFoot(foot1);
-//        sv.addFoot(foot2);
-//        sv.addFoot(foot3);
-//        sv.addFoot(foot4);
-//        sv.addFoot(foot5);
+        sv.setLeftBt("喜欢的商品");
+        left1.setText("喜欢的商品");
+        sv.setRightBt("喜欢的专题");
+        right1.setText("喜欢的专题");
+        initSVFoot();
+    }
+
+
+    public void initSVFoot() {
         View view1 = LayoutInflater.from(getContext()).inflate(R.layout.layout_scroll_foot_hei, null);
         View view2 = LayoutInflater.from(getContext()).inflate(R.layout.layout_scroll_foot_hei,null);
         List<View> datas = new ArrayList<>();

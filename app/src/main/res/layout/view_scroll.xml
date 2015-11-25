@@ -26,14 +26,16 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="风鬼传说"/>
+            android:background="#fff"
+            />
         <Button
             android:id="@+id/bt_scroll_right"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="徐狗蛋"/>
+            android:background="#fff"
+            />
 
 
     </LinearLayout>
