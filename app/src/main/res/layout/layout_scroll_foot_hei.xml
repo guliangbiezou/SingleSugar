@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="630dp"
+            android:scaleType="centerInside"
+            android:drawableTop="@drawable/ic_holder_favourite"
+            android:text="喜欢的商品可以放在这"
+            android:gravity="center_horizontal"
+            android:paddingTop="150dp"
+            android:textColor="#8888"/>
+
+
+</LinearLayout>
