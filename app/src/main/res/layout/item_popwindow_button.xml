@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:id="@+id/button_title"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/pop_bt_shape"
+        android:text="标题" />
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_alignParentRight="true"/>
+
+
+</RelativeLayout>

@@ -2,11 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
     android:orientation="vertical">
+    <la.tietie.singlesugar.view.MyViewPager
+        android:id="@+id/vp_childFragment"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:visibility="gone">
+
+    </la.tietie.singlesugar.view.MyViewPager>
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_pop"
-        android:layout_marginTop="20dp"
+        android:id="@+id/rv_chilFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     </android.support.v7.widget.RecyclerView>

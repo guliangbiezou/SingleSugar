@@ -5,5 +5,10 @@
         <!-- Customize your theme here. -->
 
     </style>
+    <style name="popWindowanim">
+        <item name="android:windowEnterAnimation">@anim/popwindow_in</item>
+        <item name="android:windowExitAnimation">@anim/popwindow_out</item>
+
+    </style>
 
 </resources>

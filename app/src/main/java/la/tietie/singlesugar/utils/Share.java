@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 /**
- * 共享参数工具类
+ * 共享参数工具类   ---
  * Created by Administrator on 2015/11/21 0021.
  */
 public class Share {

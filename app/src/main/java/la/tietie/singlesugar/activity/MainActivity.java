@@ -1,6 +1,7 @@
 package la.tietie.singlesugar.activity;
 
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,7 +17,7 @@ import la.tietie.singlesugar.fragments.HomeFragment;
 import la.tietie.singlesugar.fragments.ProfileFragment;
 import la.tietie.singlesugar.utils.VolleyUtil;
 
-public class MainActivity extends AppCompatActivity implements VolleyUtil.OnRequest {
+public class MainActivity extends FragmentActivity implements VolleyUtil.OnRequest {
     private RadioGroup radioGroup ;
     private RadioButton homeButton;
     private RadioButton danpingButton;

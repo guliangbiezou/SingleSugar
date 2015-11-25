@@ -26,4 +26,8 @@ public interface Constants {
         String SORT = "http://api.dantangapp.com/v2/channels/%d/items?limit=20&offset=0&gender=1&generation=3";
 
     }
+    interface BUNDLE_KEY{
+        String HOMEFRAGMENT_TO_CHILDFRAGMENT = "fragmentId";
+        String VPCHILD_FRAGMENT_KEY = "image_url";
+    }
 }

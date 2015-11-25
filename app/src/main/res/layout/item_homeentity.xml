@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:background="@drawable/item_homeentity_shape">
+    <la.tietie.singlesugar.view.XCRoundRectImageView
+        android:id="@+id/iv_homeItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/ic_launcher"/>
+    <TextView
+        android:id="@+id/tv_homeItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textSize="20sp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="16dp"
+        android:lines="1"
+        android:maxLines="1"
+        android:textColor="#fff"
+        android:text="我是一个粉刷匠，粉刷本领强"/>
+    <Button
+        android:id="@+id/bt_homeItem"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="1234"
+        android:textColor="#fff"
+        android:paddingLeft="8dp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="8dp"
+        android:background="@drawable/bt_home_entity_shape"
+        android:drawableLeft="@mipmap/ic_heart_normal"/>
+
+</RelativeLayout>
