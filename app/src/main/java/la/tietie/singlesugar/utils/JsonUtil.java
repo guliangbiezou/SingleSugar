@@ -14,6 +14,7 @@ import la.tietie.singlesugar.bean.DanPingData;
 import la.tietie.singlesugar.bean.DanPingItem;
 import la.tietie.singlesugar.bean.FenLeiZhuanTi;
 import la.tietie.singlesugar.bean.FenleiChannels;
+import la.tietie.singlesugar.bean.HomeEntity;
 
 /**
  * Created by Administrator on 2015/11/23 0023.
@@ -45,6 +46,24 @@ public class JsonUtil {
         object = object.getJSONObject("data");
         String result = object.getString("channel_groups");
         datas = JSON.parseArray(result,FenleiChannels.class);
+        return  datas;
+    }
+
+    public static List<HomeEntity> JsonHomeEntity(String jsonStr) {
+        List<HomeEntity> datas;
+        JSONObject object = JSON.parseObject(jsonStr);
+        object = object.getJSONObject("data");
+        String result = object.getString("posts");
+        datas = JSON.parseArray(result,HomeEntity.class);
+        return  datas;
+    }
+
+    public static List<HomeEntity> JsonFenLeiCY(String jsonStr) {
+        List<HomeEntity> datas;
+        JSONObject object = JSON.parseObject(jsonStr);
+        object = object.getJSONObject("data");
+        String result = object.getString("items");
+        datas = JSON.parseArray(result,HomeEntity.class);
         return  datas;
     }
 }

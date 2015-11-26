@@ -1,6 +1,7 @@
 package la.tietie.singlesugar.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -22,6 +23,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import la.tietie.singlesugar.R;
+import la.tietie.singlesugar.activity.FenLeiDetailActivity;
 import la.tietie.singlesugar.adapters.AbsRecyclerAdapter;
 import la.tietie.singlesugar.bean.FenLeiZhuanTi;
 import la.tietie.singlesugar.bean.FenleiChannels;
@@ -34,17 +36,18 @@ import la.tietie.singlesugar.utils.VolleyUtil;
  */
 public class CategoryFragment extends Fragment {
 
-    RecyclerView zhuanti,fengge,pinglei;
+    RecyclerView zhuanti, fengge, pinglei;
     List<FenLeiZhuanTi> datas_zt;
     List<FenleiChannels> datas;
-    List<FenleiChannels.Channel> datas_fg,datas_pl;
+    List<FenleiChannels.Channel> datas_fg, datas_pl;
     ZhuanTiAdapter adapter_zt;
-    ZhuanTiAdapter_FGPL adapter_fg,adapter_pl;
-    TextView tv_fg,tv_pl;
+    ZhuanTiAdapter_FGPL adapter_fg, adapter_pl;
+    TextView tv_fg, tv_pl;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.category_fragment,null);
+        View view = inflater.inflate(R.layout.category_fragment, null);
         initView(view);
         loadDatas();
         return view;
@@ -92,17 +95,17 @@ public class CategoryFragment extends Fragment {
         fengge = (RecyclerView) view.findViewById(R.id.rv_fenlei_fg);
         pinglei = (RecyclerView) view.findViewById(R.id.rv_fenlei_pl);
         LinearLayoutManager manager = new LinearLayoutManager(getContext(),
-                LinearLayoutManager.HORIZONTAL,false);
+                LinearLayoutManager.HORIZONTAL, false);
         zhuanti.setLayoutManager(manager);
-        adapter_zt = new ZhuanTiAdapter(getContext(),R.layout.item_fenlei_zhuanti);
+        adapter_zt = new ZhuanTiAdapter(getContext(), R.layout.item_fenlei_zhuanti);
         zhuanti.setAdapter(adapter_zt);
-        GridLayoutManager manager_fg = new GridLayoutManager(getContext(),4);
+        GridLayoutManager manager_fg = new GridLayoutManager(getContext(), 4);
         fengge.setLayoutManager(manager_fg);
-        adapter_fg = new ZhuanTiAdapter_FGPL(getContext(),R.layout.item_fenlei_fgpl);
+        adapter_fg = new ZhuanTiAdapter_FGPL(getContext(), R.layout.item_fenlei_fgpl);
         fengge.setAdapter(adapter_fg);
-        GridLayoutManager manager_pl = new GridLayoutManager(getContext(),4);
+        GridLayoutManager manager_pl = new GridLayoutManager(getContext(), 4);
         pinglei.setLayoutManager(manager_pl);
-        adapter_pl = new ZhuanTiAdapter_FGPL(getContext(),R.layout.item_fenlei_fgpl);
+        adapter_pl = new ZhuanTiAdapter_FGPL(getContext(), R.layout.item_fenlei_fgpl);
         pinglei.setAdapter(adapter_pl);
 
     }
@@ -114,24 +117,40 @@ public class CategoryFragment extends Fragment {
         }
 
         @Override
-        public void bindDatas(MyViewHolder holder, FenLeiZhuanTi data) {
-              ImageView iv = (ImageView) holder.getView(R.id.iv_fl_zhuanti);
-              VolleyUtil.reqestImage(data.getBanner_image_url(),iv,R.drawable.ig_holder_image,R.drawable.ig_holder_image);
+        public void bindDatas(MyViewHolder holder, final FenLeiZhuanTi data) {
+            ImageView iv = (ImageView) holder.getView(R.id.iv_fl_zhuanti);
+            VolleyUtil.reqestImage(data.getBanner_image_url(), iv, R.drawable.ig_holder_image, R.drawable.ig_holder_image);
+            iv.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getContext(), FenLeiDetailActivity.class);
+                    intent.putExtra("data",data);
+                    startActivity(intent);
+                }
+            });
         }
     }
 
-    class ZhuanTiAdapter_FGPL extends  AbsRecyclerAdapter<FenleiChannels.Channel> {
+    class ZhuanTiAdapter_FGPL extends AbsRecyclerAdapter<FenleiChannels.Channel> {
 
         public ZhuanTiAdapter_FGPL(Context context, int resId) {
             super(context, resId);
         }
 
         @Override
-        public void bindDatas(MyViewHolder holder, FenleiChannels.Channel data) {
+        public void bindDatas(MyViewHolder holder, final FenleiChannels.Channel data) {
             ImageView iv = (ImageView) holder.getView(R.id.iv_item_fgpl);
             TextView tv = (TextView) holder.getView(R.id.tv_item_fgpl);
-            VolleyUtil.reqestImage(data.getIcon_url(),iv,R.drawable.ig_holder_image,R.drawable.ig_holder_image);
+            VolleyUtil.reqestImage(data.getIcon_url(), iv, R.drawable.ig_holder_image, R.drawable.ig_holder_image);
             tv.setText(data.getName());
+            iv.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getContext(), FenLeiDetailActivity.class);
+                    intent.putExtra("data",data);
+                    startActivity(intent);
+                }
+            });
         }
     }
 }

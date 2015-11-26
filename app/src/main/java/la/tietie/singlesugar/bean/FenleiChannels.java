@@ -1,11 +1,12 @@
 package la.tietie.singlesugar.bean;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
  * Created by Administrator on 2015/11/24 0024.
  */
-public class FenleiChannels {
+public class FenleiChannels implements Serializable{
 
     private  Channel[] channels;
     private  String id;
@@ -67,7 +68,7 @@ public class FenleiChannels {
                 '}';
     }
 
-   public static class Channel {
+   public static class Channel implements Serializable{
         private  String group_id;
         private  String icon_url;
         private  String id;

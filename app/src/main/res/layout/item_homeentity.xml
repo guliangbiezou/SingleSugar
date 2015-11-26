@@ -2,12 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
+    android:padding="10dp"
     android:background="@drawable/item_homeentity_shape">
     <la.tietie.singlesugar.view.XCRoundRectImageView
         android:id="@+id/iv_homeItem"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+
         android:src="@drawable/ig_holder_image"/>
     <TextView
         android:id="@+id/tv_homeItem"

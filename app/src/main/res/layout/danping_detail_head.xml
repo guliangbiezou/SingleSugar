@@ -1,16 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical">
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/vp_dp_detail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_width="wrap_content"
+        android:layout_height="400dp">
     </android.support.v4.view.ViewPager>
 
+    <la.tietie.singlesugar.view.Dots_View
+        android:id="@+id/dv_dp_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:checked="@drawable/point_green_active"
+        app:unchecked="@drawable/point_grey"
+        app:left_margin="10"
+        android:layout_alignBottom="@+id/vp_dp_detail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        >
+
+    </la.tietie.singlesugar.view.Dots_View>
+
+</RelativeLayout>
+
+
     <TextView
+        android:id="@+id/tv_detail_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="不锈钢保温杯"
@@ -19,12 +41,14 @@
         android:textColor="#000"
         android:textSize="18sp"/>
     <TextView
+        android:id="@+id/tv_detail_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/colorTitle"
         android:layout_margin="10dp"
         android:text="58.00"/>
     <TextView
+        android:id="@+id/tv_detail_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="14sp"

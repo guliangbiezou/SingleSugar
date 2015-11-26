@@ -10,9 +10,7 @@ public interface Constants {
         String HOME_LISTVIEW = "http://api.dantangapp.com/v2/channels/%d/items?limit=20&offset=0&gender=1&generation=2";
         String DANGPING = "http://api.dantangapp.com/v2/items?limit=20&offset=0&gender=1&generation=2";
         String SORT_ZHUANTI_IMAGES = "http://api.dantangapp.com/v2/collections?limit=10&offset=0";
-        String ZHUANGTI_DETAIL = "http://api.dantangapp.com/v2/collections/%d/posts?limit=20&offset=0";
-
-
+        String ZHUANGTI_DETAIL = "http://api.dantangapp.com/v2/collections/%s/posts?limit=20&offset=0";
         String SHANGPING_DETAIL_V2 = "http://api.dantangapp.com/v2/items/%d";
         String SHANGPING_PINGLUN_V2 = "http://api.dantangapp.com/v2/items/%d/comments?offset=0&limit=20";
 
@@ -23,8 +21,7 @@ public interface Constants {
         String SEARCH_ZHUANTI = "http://api.dantangapp.com/v2/search/post?keyword=%s&sort=&offset=0&limit=20";
 
         String SORT_MAIN = "http://api.dantangapp.com/v2/channel_groups/all";
-        String SORT = "http://api.dantangapp.com/v2/channels/%d/items?limit=20&offset=0&gender=1&generation=3";
-
+        String SORT = "http://api.dantangapp.com/v2/channels/%s/items?limit=20&offset=0&gender=1&generation=3";
     }
     interface BUNDLE_KEY{
         String HOMEFRAGMENT_TO_CHILDFRAGMENT = "fragmentId";

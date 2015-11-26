@@ -29,6 +29,9 @@ public class HomeEntity {
     private String title;
     private String url;
 
+    public HomeEntity() {
+    }
+
     public HomeEntity(String content_url, String cover_image_url, int id, int likes_count, String title, String url) {
         this.content_url = content_url;
         this.cover_image_url = cover_image_url;
